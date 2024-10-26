@@ -1,6 +1,7 @@
 # webScrap
 
 This Python project scraps product titles and reviews / comments from eBay product pages. The script extracts the product title and associated comments or reviews and saves the results to an outputs.txt file.
+**Only tested for ebay, will likely require modification to beautiful soup parsing logic to work for other websites as HTML structure varies**
 
 ## Features
 
