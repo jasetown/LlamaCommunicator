@@ -67,7 +67,7 @@ class analyzeComments:
 # Class to Visualize Data
 class createGraph:
     @staticmethod
-    def graphData(sentimentsFolder):
+    def graphData(sentimentsFolder, output = "SentimentChart.png"):
         import numpy as np  
         # Initialize Data
         deviceSentiments = {}    
@@ -111,7 +111,7 @@ class createGraph:
         
         # Save or Display Graph
         plt.tight_layout()
-        plt.savefig("SentimentChart.png")
+        plt.savefig(output)
 
 def main():
     # Collect Comments

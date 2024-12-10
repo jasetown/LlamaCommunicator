@@ -17,10 +17,13 @@ def analyzeData(soup, url):
     # Initialize an Empty List to Store Output Data
     output = []
     
-    # Find the Product Title in an h1 Class Between Span Tags
-    title = soup.find('h1', class_='x-item-title__mainTitle').find('span').get_text()
+    title = None  # Default value if the chain fails
+    if soup.find('h1', class_='x-item-title__mainTitle') and soup.find('h1', class_='x-item-title__mainTitle').find('span'):
+        title = soup.find('h1', class_='x-item-title__mainTitle').find('span').get_text()
+
     # Append the Title to the Output List
-    output.append(f"{title}\n")
+    output.append(f"{title}\n" if title else "No Title Found\n")
+
     
     # Locate all Review Comments Within Specific div Tags by Class
     numComments = soup.find_all('div', class_='fdbk-container__details__comment')
