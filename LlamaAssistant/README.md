@@ -80,6 +80,7 @@ Positive
 
 ### Visualization:
 The program generates a grouped bar chart categorizing sentiments per product.
+![SentimentChart](https://github.com/user-attachments/assets/e518f3e3-f11d-4431-85f1-2aa78138d183)
 
 ---
 
